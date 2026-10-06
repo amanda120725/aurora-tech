@@ -1,0 +1,89 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* CORRIGIDO: Removido o espaço e ajustada a sintaxe do degradê */
+  background: linear-gradient(-45deg, #FFE4EF, #FFD9E8, #E0B0FF, #FF80BF, #FF66B2);
+  /* CORRIGIDO: Removido o ponto e vírgula duplicado */
+  background-size: 600% 600%;
+  animation: glowAnimation 10s ease infinite; 
+}
+
+@keyframes glowAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.marca-loja {
+  text-align: center;
+  margin: 40px 0; 
+}
+
+.nome-loja {
+  font-family: 'Didot', 'Bodoni MT', 'Cinzel', 'Georgia', serif;
+  font-size: 3.5rem;          
+  font-weight: 700;
+  color: #333333; 
+  margin-bottom: 8px;       
+}
+
+.subtitulo-loja {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;       
+  font-weight: 400;
+  color: #FF1493; 
+  letter-spacing: 2px;  
+}
+
+.catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.produto {
+    width: 250px;
+    background-color: #f9d7e2; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgb(12, 12, 12); 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4); 
+}
+
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.preco {
+    color: #FF1493; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #FF1493; 
+    color: rgb(24, 21, 24); 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ff3399; 
+    transform: translateY(-2px);
+}
